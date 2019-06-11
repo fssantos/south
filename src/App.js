@@ -4,11 +4,14 @@ import { ThemeProvider } from 'styled-components';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import defaultTheme from './constants/defaultTheme';
 
+import Header from './components/Header';
+
 class App extends Component {
     render() {
         return (
             <ThemeProvider theme={defaultTheme}>
                 <div>
+                    <Header />
                     <Switch>
                         <Route path="/testing1" component={() => <p>Hello</p>} />
                         <Route path="/testing2" component={() => <p>Hello</p>} />
