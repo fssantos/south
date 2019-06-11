@@ -13,7 +13,7 @@ class App extends Component {
                         <Route path="/testing1" component={() => <p>Hello</p>} />
                         <Route path="/testing2" component={() => <p>Hello</p>} />
 
-                        <Redirect to="/meetings" />
+                        <Redirect to="/testing1" />
                     </Switch>
                 </div>
             </ThemeProvider>

@@ -9,7 +9,9 @@
         "start": "node scripts/start.js",
         "test": "node scripts/test.js --env=jsdom",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "deploy": "yarn build && aws s3 sync build/ s3://south-frontend",
+        "deploy-storybook": "yarn build-storybook && aws s3 sync storybook-static/ s3://south-storybook"
     },
     "dependencies": {
         "draft-js": "^0.10.5",
