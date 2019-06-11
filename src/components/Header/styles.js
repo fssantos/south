@@ -45,12 +45,12 @@ export const SearchBarInput = styled.input`
     ::placeholder,
     ::-webkit-input-placeholder {
         font-size: 16px;
-        color: ${props => props.theme.mainFontColor};
+        color: ${props => props.theme.primaryFontColor};
         padding: 0px 8px;
     }
     :-ms-input-placeholder {
         font-size: 16px;
-        color: ${props => props.theme.mainFontColor};
+        color: ${props => props.theme.primaryFontColor};
         padding: 0px 8px;
     }
 `;
