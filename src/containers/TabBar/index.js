@@ -7,7 +7,6 @@ import { sections } from '../../constants';
 
 class TabBar extends React.Component {
     render() {
-        console.log(sections);
         return (
             <Container>
                 {sections.map((e, i) => (

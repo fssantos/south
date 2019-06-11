@@ -6,7 +6,6 @@ import { Container, TabDescription } from './styles';
 
 class SectionItem extends React.Component {
     render() {
-        console.log(this.props);
         const { onClick, tag, Icon } = this.props;
         return (
             <Container onClick={() => onClick(tag)}>

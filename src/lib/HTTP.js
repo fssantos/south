@@ -49,10 +49,9 @@ async function parseResponse(response) {
     }
 }
 
-export function get(path, token) {
+export function get(path) {
     return fetch(`${API_BASE_URL}${path}`, {
-        method: 'GET',
-        headers: headers(token)
+        method: 'GET'
     })
         .then(validateStatusCode)
         .then(validateContentType)

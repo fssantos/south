@@ -1,5 +1,263 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots BookItem sample 1`] = `
+<div
+  className="sc-gZMcBi jnspAq"
+  onClick={[Function]}
+>
+  <img
+    className="sc-gqjmRU bbLcwD"
+    src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+  />
+  <div
+    className="sc-VigVT kDehUQ"
+  >
+    <div
+      className="sc-jTzLTM dEehHl"
+    >
+      <p
+        className="sc-fjdhpX ldJyfM"
+      >
+        Curso de montagem
+      </p>
+      <p
+        className="sc-jzJRlG bAORBt"
+      >
+        Marilane Almeida
+      </p>
+    </div>
+    <div
+      className="sc-cSHVUG dEvoFo"
+    >
+      <div
+        className="dv-star-rating dv-star-rating-non-editable"
+        style={
+          Object {
+            "display": "inline-block",
+            "position": "relative",
+          }
+        }
+      >
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_5"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={5}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-empty-star"
+          htmlFor="rate2_5"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#F7F7F7",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={true}
+          className="dv-star-rating-input"
+          id="rate2_4"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={4}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_4"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_3"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={3}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_3"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_2"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={2}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_2"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_1"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={1}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_1"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+      </div>
+      <div
+        className="sc-kAzzGY bccKyZ"
+      >
+        <p
+          className="sc-kgoBCf dGEGbx"
+        >
+          R$4.95
+        </p>
+        <p
+          className="sc-chPdSV kfQcoH"
+        >
+          R$9.90
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Header with large screen 1`] = `
 <div
   className="sc-bwzfXH IZWuE"
@@ -61,7 +319,7 @@ exports[`Storyshots SectionItem sci-fi sample 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="sc-bdVaJa hizBCv StyledIconBase-sc-bdy9j4 cCvWXa"
+    className="sc-bdVaJa bDWFJH StyledIconBase-sc-bdy9j4 cCvWXa"
     color="rgba(51, 51, 51,0.5)"
     fill="currentColor"
     focusable="false"

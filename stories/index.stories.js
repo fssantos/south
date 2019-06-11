@@ -12,6 +12,7 @@ import { SectionIcon } from './mocks';
 
 import Header from '../src/components/Header';
 import SectionItem from '../src/components/SectionItem';
+import BookItem from '../src/components/BookItem';
 
 addDecorator(storyFn => (
     <ThemeProvider theme={defaultTheme}>
@@ -33,5 +34,16 @@ storiesOf('SectionItem', module).add('sci-fi sample', () => (
         onClick={tag => alert(tag)}
         tag="Ficção"
         Icon={<SectionIcon size={18} color={defaultTheme.primaryFontColor} />}
+    />
+));
+
+storiesOf('BookItem', module).add('sample', () => (
+    <BookItem
+        title="Curso de montagem e manutenção de computadores"
+        tumbImg="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+        stars={4}
+        author="Marilane Almeida"
+        price={'R$9.90'}
+        oldPrice={'R$4.95'}
     />
 ));

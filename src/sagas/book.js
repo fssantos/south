@@ -3,9 +3,11 @@ import { fetchBooks, fetchBooksCompleted } from '../ducks';
 import { getBooksFromApi } from '../api';
 
 function* fetchBooksSaga(action) {
-    const { meetingId } = action.payload;
+    console.log({ action });
+    const searchTerm = 'filosofia';
+    /*     const { searchTerm } = action.payload; */
     try {
-        const notes = yield call(() => getBooksFromApi(`search/?meetingId=${meetingId}`));
+        const notes = yield call(() => getBooksFromApi(searchTerm));
         yield put(fetchBooksCompleted({ notes }));
     } catch (error) {
         yield put(fetchBooksCompleted(error));
