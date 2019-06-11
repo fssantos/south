@@ -5,18 +5,22 @@ import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import defaultTheme from './constants/defaultTheme';
 
 import Header from './components/Header';
+import Home from './containers/Home';
 
 class App extends Component {
     render() {
         return (
             <ThemeProvider theme={defaultTheme}>
                 <div>
-                    <Header />
+                    <Header
+                        onChange={() => alert('changed text')}
+                        onClick={() => alert('clicked on search')}
+                    />
                     <Switch>
-                        <Route path="/testing1" component={() => <p>Hello</p>} />
+                        <Route path="/home" component={() => <Home />} />
                         <Route path="/testing2" component={() => <p>Hello</p>} />
 
-                        <Redirect to="/testing1" />
+                        <Redirect to="/home" />
                     </Switch>
                 </div>
             </ThemeProvider>

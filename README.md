@@ -1,6 +1,6 @@
 # Live Demo
 
-You can find a live demo [here](http://south-frontend.s3-us-east-2.amazonaws.com/testing1).
+You can find a live demo [here](http://south-frontend.s3-us-east-2.amazonaws.com/index.html).
 
 Also, a live demo of each component using [Storybook](https://storybook.js.org) is available [here](http://south-storybook.s3-us-east-2.amazonaws.com/index.html).
 
