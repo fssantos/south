@@ -5,7 +5,9 @@ import {
     changeBooksFilter,
     fetchMoreBooks,
     fetchBooksCompleted,
-    fetchMoreBooksCompleted
+    fetchMoreBooksCompleted,
+    addFavorite,
+    addFavoriteCompleted
 } from '../ducks';
 import { getBooksFromApi } from '../api';
 
@@ -25,7 +27,6 @@ function* fetchMoreBooksSaga() {
     try {
         const filter = yield select(selectors.getFilter);
         const startIndex = yield select(selectors.getStartIndex);
-        console.log({ filter, startIndex });
         const books = yield call(() =>
             getBooksFromApi({ searchTerm: filter, startIndex: startIndex + 10 })
         );
@@ -35,10 +36,17 @@ function* fetchMoreBooksSaga() {
     }
 }
 
+function* saveFavorite({ item }) {
+    /*     const { searchTerm } = action.payload; */
+    yield console.log({ item });
+    yield put(addFavoriteCompleted({ item }));
+}
+
 export default function* bookSaga() {
     yield all([
         takeLatest(fetchBooks, fetchBooksSaga),
         takeLatest(changeBooksFilter, fetchBooksSaga),
-        takeLatest(fetchMoreBooks, fetchMoreBooksSaga)
+        takeLatest(fetchMoreBooks, fetchMoreBooksSaga),
+        takeLatest(addFavorite, saveFavorite)
     ]);
 }

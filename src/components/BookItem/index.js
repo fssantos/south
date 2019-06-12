@@ -20,9 +20,9 @@ const parseText = ({ text }) => (text.length > 17 ? text.substr(0, 17) : text);
 
 class BookItem extends React.Component {
     render() {
-        const { title, tumbImg, stars, author, price, oldPrice, onClick } = this.props;
+        const { title, tumbImg, stars, author, price, oldPrice, onFavoriteClick } = this.props;
         return (
-            <Container onClick={() => onClick('book clicked')}>
+            <Container onClick={() => onFavoriteClick('book clicked')}>
                 <TumbImg src={tumbImg} />
                 <InfosWrapper>
                     <TitleAndAuthorWrapper>
@@ -57,7 +57,8 @@ BookItem.propTypes = {
     author: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     oldPrice: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    /* onClick: PropTypes.func.isRequired, */
+    onFavoriteClick: PropTypes.func.isRequired
 };
 
 export default withRouter(BookItem);

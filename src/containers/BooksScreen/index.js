@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import { changeBooksFilter, fetchMoreBooks } from '../../ducks';
+import { changeBooksFilter, fetchMoreBooks, addFavorite } from '../../ducks';
 import { getBooks } from '../../selectors';
 import { sanitizeBook } from './helper';
 import BookItem from '../../components/BookItem';
@@ -46,6 +46,12 @@ class BooksScreen extends React.Component {
         ); */
     }
 
+    handleFavoriteClicked({ item }) {
+        const { onFavoriteClick } = this.props;
+        console.log('I was clicked', { item });
+        onFavoriteClick({ item });
+    }
+
     render() {
         console.log(this.state);
         const { books, totalItems } = this.props;
@@ -59,7 +65,12 @@ class BooksScreen extends React.Component {
             >
                 <Container>
                     {books.map(e => (
-                        <BookItem onClick={() => alert(e.id)} key={e.id} {...e} />
+                        <BookItem
+                            onClick={() => alert(e.id)}
+                            onFavoriteClick={() => this.handleFavoriteClicked({ item: e })}
+                            key={e.id}
+                            {...e}
+                        />
                     ))}
                 </Container>
             </InfiniteScroll>
@@ -77,7 +88,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         onChangeBooksFilter: ({ filter }) => dispatch(changeBooksFilter({ filter })),
-        onFetchMoreBooks: () => dispatch(fetchMoreBooks())
+        onFetchMoreBooks: () => dispatch(fetchMoreBooks()),
+        onFavoriteClick: ({ item }) => dispatch(addFavorite({ item }))
     };
 }
 
@@ -85,7 +97,8 @@ BooksScreen.propTypes = {
     books: PropTypes.array,
     totalItems: PropTypes.number,
     onChangeBooksFilter: PropTypes.func.isRequired,
-    onFetchMoreBooks: PropTypes.func.isRequired
+    onFetchMoreBooks: PropTypes.func.isRequired,
+    onFavoriteClick: PropTypes.func.isRequired
 };
 
 BooksScreen.defaultProps = {
