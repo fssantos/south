@@ -1,3 +1,4 @@
 export function getBooks(state) {
-    return state.get('books');
+    const resp = state.get('books');
+    return resp.items || [];
 }

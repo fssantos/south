@@ -15,13 +15,14 @@ class BooksScreen extends React.Component {
     }
     render() {
         const { books, totalItems } = this.props;
+        console.log({ books, totalItems });
         return <Container />;
     }
 }
 
 function mapStateToProps(state) {
     return {
-        books: getBooks(state).items.map(e => sanitizeBook(e)),
+        books: getBooks(state).map(e => sanitizeBook(e)),
         totalItems: getBooks(state).totalItems
     };
 }
@@ -39,7 +40,7 @@ BooksScreen.propTypes = {
 };
 
 BooksScreen.defaultProps = {
-    books: [],
+    books: { items: [] },
     totalItems: 0
 };
 
