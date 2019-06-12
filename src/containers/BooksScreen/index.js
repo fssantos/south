@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { fetchBooks } from '../../ducks';
 import { getBooks } from '../../selectors';
+import { sanitizeBook } from './helper';
 
 import { Container } from './styles';
 
@@ -14,15 +15,13 @@ class BooksScreen extends React.Component {
     }
     render() {
         const { books, totalItems } = this.props;
-        console.log('books on container:', { books });
-        console.log({ totalItems });
         return <Container />;
     }
 }
 
 function mapStateToProps(state) {
     return {
-        books: getBooks(state).items,
+        books: getBooks(state).items.map(e => sanitizeBook(e)),
         totalItems: getBooks(state).totalItems
     };
 }
