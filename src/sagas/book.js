@@ -1,13 +1,12 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
-import { fetchBooks, fetchBooksCompleted } from '../ducks';
+import { fetchBooks, changeBooksFilter, fetchBooksCompleted } from '../ducks';
 import { getBooksFromApi } from '../api';
 
 function* fetchBooksSaga(action) {
-    const { startIndex } = action.payload;
-    const searchTerm = 'filosofia';
+    const { startIndex = 1, filter } = action.payload;
     /*     const { searchTerm } = action.payload; */
     try {
-        const books = yield call(() => getBooksFromApi({ searchTerm, startIndex }));
+        const books = yield call(() => getBooksFromApi({ searchTerm: filter, startIndex }));
         yield put(fetchBooksCompleted({ books }));
     } catch (error) {
         yield put(fetchBooksCompleted(error));
@@ -15,5 +14,8 @@ function* fetchBooksSaga(action) {
 }
 
 export default function* bookSaga() {
-    yield all([takeLatest(fetchBooks, fetchBooksSaga)]);
+    yield all([
+        takeLatest(fetchBooks, fetchBooksSaga),
+        takeLatest(changeBooksFilter, fetchBooksSaga)
+    ]);
 }

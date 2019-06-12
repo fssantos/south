@@ -9,3 +9,16 @@ export default handleActions(
     },
     []
 );
+
+/* 
+export default handleActions(
+    {
+        [fetchBooksCompleted]: (state, { payload }) => ({
+            ...state,
+            books: {
+                items: [...state.books.items, payload.books.items]
+            }
+        })
+    },
+    []
+); */

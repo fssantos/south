@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import { fetchBooks, changeBooksFilter } from '../../ducks';
+import { fetchBooks } from '../../ducks';
 import { getBooks, getFilter } from '../../selectors';
 import { sanitizeBook } from './helper';
 import BookItem from '../../components/BookItem';
@@ -14,21 +14,36 @@ class BooksScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            startIndex: '1'
+            startIndex: 1,
+            filter: ''
         };
 
         this.fetchData = this.fetchData.bind(this);
+        this.fetchInitialData = this.fetchInitialData.bind(this);
     }
 
     componentDidMount() {
-        this.fetchData();
+        this.fetchInitialData();
+    }
+
+    fetchInitialData() {
+        const { startIndex } = this.state;
+        const { onFetchBooks } = this.props;
+        onFetchBooks({ startIndex });
     }
 
     fetchData() {
-        const { startIndex } = this.state;
-        const { onFetchBooks, onChangeBooksFilter } = this.props;
-        onFetchBooks({ startIndex });
-        onChangeBooksFilter({ filter: 'matemática' });
+        const { onFetchBooks, filter } = this.props;
+
+        this.setState(
+            state => ({
+                startIndex: filter !== state.filter ? 2 : state.startIndex + 1,
+                filter: filter !== state.filter ? filter : state.filter
+            }),
+            () => {
+                onFetchBooks({ startIndex: this.state.startIndex, filter: this.state.filter });
+            }
+        );
     }
 
     render() {
@@ -62,8 +77,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        onFetchBooks: ({ startIndex }) => dispatch(fetchBooks({ startIndex })),
-        onChangeBooksFilter: ({ filter }) => dispatch(changeBooksFilter({ filter }))
+        onFetchBooks: ({ startIndex }) => dispatch(fetchBooks({ startIndex }))
     };
 }
 
@@ -71,7 +85,6 @@ BooksScreen.propTypes = {
     books: PropTypes.array,
     totalItems: PropTypes.number,
     onFetchBooks: PropTypes.func.isRequired,
-    onChangeBooksFilter: PropTypes.func.isRequired,
     filter: PropTypes.string
 };
 

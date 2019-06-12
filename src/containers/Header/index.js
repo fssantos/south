@@ -38,6 +38,7 @@ export class Header extends React.Component {
                         value={searchText}
                         onChange={e => {
                             this.setState({ searchText: e.target.value });
+                            onChangeBooksFilter({ filter: e.target.value });
                         }}
                         placeholder="Search"
                     />

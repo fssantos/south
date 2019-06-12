@@ -24,7 +24,7 @@ const extractInfos = book => {
     return {
         id,
         title: volumeInfo.title || '',
-        tumbImg: volumeInfo.imageLinks.thumbnail || '',
+        tumbImg: volumeInfo.imageLinks ? volumeInfo.imageLinks.thumbnail || '' : '',
         stars: volumeInfo.averageRating || 0,
         author: volumeInfo.authors ? volumeInfo.authors[0] : '',
         oldPrice: saleInfo.listPrice ? saleInfo.listPrice.amount : '',

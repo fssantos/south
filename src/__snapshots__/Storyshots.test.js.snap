@@ -2,11 +2,11 @@
 
 exports[`Storyshots BookItem sample 1`] = `
 <div
-  className="sc-gZMcBi rONVd"
+  className="sc-gZMcBi jzWRzj"
   onClick={[Function]}
 >
   <img
-    className="sc-gqjmRU cJMKwO"
+    className="sc-gqjmRU gGcQZY"
     src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
   />
   <div
@@ -230,9 +230,10 @@ exports[`Storyshots Header with large screen 1`] = `
     className="sc-bxivhb evsqlO"
   >
     <input
-      className="sc-ifAKCX iQdBOY"
+      className="sc-ifAKCX euzEzr"
       onChange={[Function]}
       placeholder="Search"
+      value=""
     />
     <svg
       aria-hidden="true"
