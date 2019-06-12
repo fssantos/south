@@ -37,9 +37,9 @@ export const SearchBarInput = styled.input`
     diplay: flex;
     flex: 7;
     height: 30px;
-    padding: 0px;
+    padding-left: 10px;
     border-width: 0px;
-    color: white;
+    color: ${props => props.theme.primaryFontColor};
     background-color: white;
     margin: 0
     ::placeholder,

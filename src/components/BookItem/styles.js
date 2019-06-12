@@ -28,6 +28,8 @@ export const Container = styled.div`
 `;
 
 export const TumbImg = styled.img`
+    background-color: white;
+    padding: 0px 3px 0px 3px
     display: flex;
     flex: 1;
 `;

@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import { fetchBooks } from '../../ducks';
-import { getBooks } from '../../selectors';
+import { fetchBooks, changeBooksFilter } from '../../ducks';
+import { getBooks, getFilter } from '../../selectors';
 import { sanitizeBook } from './helper';
 import BookItem from '../../components/BookItem';
 
@@ -26,14 +26,15 @@ class BooksScreen extends React.Component {
 
     fetchData() {
         const { startIndex } = this.state;
-        const { onFetchBooks } = this.props;
+        const { onFetchBooks, onChangeBooksFilter } = this.props;
         onFetchBooks({ startIndex });
+        onChangeBooksFilter({ filter: 'matemática' });
     }
 
     render() {
         console.log(this.state);
-        const { books, totalItems } = this.props;
-        console.log({ books, totalItems });
+        const { books, totalItems, filter } = this.props;
+        console.log({ books, totalItems, filter });
         return (
             <InfiniteScroll
                 dataLength={books.length}
@@ -54,25 +55,30 @@ class BooksScreen extends React.Component {
 function mapStateToProps(state) {
     return {
         books: getBooks(state).map(e => sanitizeBook(e)),
+        filter: getFilter(state),
         totalItems: getBooks(state).totalItems
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        onFetchBooks: ({ startIndex }) => dispatch(fetchBooks({ startIndex }))
+        onFetchBooks: ({ startIndex }) => dispatch(fetchBooks({ startIndex })),
+        onChangeBooksFilter: ({ filter }) => dispatch(changeBooksFilter({ filter }))
     };
 }
 
 BooksScreen.propTypes = {
     books: PropTypes.array,
     totalItems: PropTypes.number,
-    onFetchBooks: PropTypes.func.isRequired
+    onFetchBooks: PropTypes.func.isRequired,
+    onChangeBooksFilter: PropTypes.func.isRequired,
+    filter: PropTypes.string
 };
 
 BooksScreen.defaultProps = {
     books: { items: [] },
-    totalItems: 0
+    totalItems: 0,
+    filter: ''
 };
 
 export default connect(

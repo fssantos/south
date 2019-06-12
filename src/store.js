@@ -1,5 +1,6 @@
 import Immutable from 'immutable';
 import { applyMiddleware, createStore, compose } from 'redux';
+import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import mainSaga from './sagas';
 import mainReducer from './ducks';
@@ -10,7 +11,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export default createStore(
     mainReducer,
     Immutable.fromJS({}),
-    composeEnhancers(applyMiddleware(sagaMiddleware))
+    composeEnhancers(applyMiddleware(logger, sagaMiddleware))
 );
 
 sagaMiddleware.run(mainSaga);

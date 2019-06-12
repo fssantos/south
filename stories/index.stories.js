@@ -3,6 +3,7 @@ import React from 'react';
 import { storiesOf, addDecorator } from '@storybook/react';
 import { linkTo } from '@storybook/addon-links';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import { Welcome } from '@storybook/react/demo';
 import defaultTheme from '../src/constants/defaultTheme';
@@ -10,7 +11,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { SectionIcon } from './mocks';
 
-import Header from '../src/components/Header';
+import { Header } from '../src/containers/Header';
 import SectionItem from '../src/components/SectionItem';
 import BookItem from '../src/components/BookItem';
 

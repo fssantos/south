@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import defaultTheme from './constants/defaultTheme';
 
-import Header from './components/Header';
+import Header from './containers/Header';
 import Home from './containers/Home';
 
 class App extends Component {
@@ -12,10 +12,7 @@ class App extends Component {
         return (
             <ThemeProvider theme={defaultTheme}>
                 <div>
-                    <Header
-                        onChange={() => alert('changed text')}
-                        onClick={() => alert('clicked on search')}
-                    />
+                    <Header />
                     <Switch>
                         <Route path="/home" component={() => <Home />} />
                         <Route path="/testing2" component={() => <p>Hello</p>} />

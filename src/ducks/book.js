@@ -5,7 +5,7 @@ export const fetchBooksCompleted = createAction('FETCH_BOOKS_COMPLETED');
 
 export default handleActions(
     {
-        [fetchBooksCompleted]: (state, { payload }) => payload.notes
+        [fetchBooksCompleted]: (state, { payload }) => payload.books
     },
     []
 );
