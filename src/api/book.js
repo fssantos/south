@@ -1,5 +1,5 @@
 import { get } from '../lib/HTTP';
 
-export function getBooksFromApi(searchTerm) {
-    return get(`/volumes?q=/${searchTerm}`);
+export function getBooksFromApi({ searchTerm, startIndex }) {
+    return get(`/volumes?q=/${searchTerm}&startIndex=${startIndex}`);
 }

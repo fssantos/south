@@ -24,6 +24,7 @@
         "prop-types": "^15.6.0",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",
+        "react-infinite-scroll-component": "^4.5.2",
         "react-intl": "^2.4.0",
         "react-redux": "^5.0.6",
         "react-router-dom": "^4.2.2",
@@ -47,7 +48,7 @@
         "@storybook/react": "^5.0.11",
         "autoprefixer": "^7.1.6",
         "babel-core": "^6.26.0",
-        "babel-eslint": "^8.0.2",
+        "babel-eslint": "^10.0.1",
         "babel-jest": "^21.2.0",
         "babel-loader": "^7.1.2",
         "babel-plugin-require-context-hook": "^1.0.0",
@@ -146,6 +147,7 @@
         }
     },
     "eslintConfig": {
-        "extends": "react-app"
+        "extends": "react-app",
+        "parser": "babel-eslint"
     }
 }
