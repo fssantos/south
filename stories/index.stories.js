@@ -39,11 +39,15 @@ storiesOf('SectionItem', module).add('sci-fi sample', () => (
 
 storiesOf('BookItem', module).add('sample', () => (
     <BookItem
+        id="1234"
         title="Curso de montagem e manutenção de computadores"
         tumbImg="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
         stars={4}
         author="Marilane Almeida"
         price={'R$9.90'}
         oldPrice={'R$4.95'}
+        onClick={() => {
+            alert('clicked');
+        }}
     />
 ));

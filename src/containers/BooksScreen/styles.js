@@ -4,7 +4,9 @@ import media from '../../constants/media';
 
 export const Container = styled.div`
     display: flex;
-    height: 200px;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
     background-color: ${props => props.theme.primaryBackgroundColor}
     flex: 4;
     ${media.phone`

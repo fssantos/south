@@ -2,15 +2,15 @@
 
 exports[`Storyshots BookItem sample 1`] = `
 <div
-  className="sc-gZMcBi jnspAq"
+  className="sc-gZMcBi rONVd"
   onClick={[Function]}
 >
   <img
-    className="sc-gqjmRU bbLcwD"
+    className="sc-gqjmRU cJMKwO"
     src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
   />
   <div
-    className="sc-VigVT kDehUQ"
+    className="sc-VigVT facbFy"
   >
     <div
       className="sc-jTzLTM dEehHl"
@@ -38,46 +38,6 @@ exports[`Storyshots BookItem sample 1`] = `
           }
         }
       >
-        <input
-          checked={false}
-          className="dv-star-rating-input"
-          id="rate2_5"
-          name="rate2"
-          onChange={[Function]}
-          style={
-            Object {
-              "display": "none",
-              "marginLeft": -9999,
-              "position": "absolute",
-            }
-          }
-          type="radio"
-          value={5}
-        />
-        <label
-          className="dv-star-rating-star dv-star-rating-empty-star"
-          htmlFor="rate2_5"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          style={
-            Object {
-              "color": "#F7F7F7",
-              "cursor": "default",
-              "float": "right",
-            }
-          }
-        >
-          <i
-            style={
-              Object {
-                "fontStyle": "normal",
-              }
-            }
-          >
-            ★
-          </i>
-        </label>
         <input
           checked={true}
           className="dv-star-rating-input"

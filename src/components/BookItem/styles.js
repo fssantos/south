@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../constants/media';
 
 const fontColor = 'rgba(97, 97, 97, 0.9)';
 const fontSize = '16px';
@@ -8,25 +9,34 @@ const lineHeight = '16px';
 export const Container = styled.div`
     width: 170px;
     display: flex;
+    margin-top: 30px;
     margin-right: 45px;
     cursor: default;
     background-color: white;
     flex-direction: column;
+    background-color: ${props => props.theme.primaryBackgroundColor}
     -webkit-box-shadow: 2px 2px 5px 0px rgba(238, 238, 238, 0.3);
     -moz-box-shadow: 2px 2px 5px 0px rgba(238, 238, 238, 0.3);
     box-shadow: 2px 2px 5px 0px rgba(238, 238, 238, 0.3);
+
+    ${media.phone`
+    flex: 1;
+    margin-right: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+ `}
 `;
 
 export const TumbImg = styled.img`
     display: flex;
     flex: 1;
-    max-height: 230px;
 `;
 
 export const InfosWrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0px 8px 4px 8px;
+    background-color: white;
 `;
 
 export const TitleAndAuthorWrapper = styled.div`

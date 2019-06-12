@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { fetchBooks } from '../../ducks';
 import { getBooks } from '../../selectors';
 import { sanitizeBook } from './helper';
+import BookItem from '../../components/BookItem';
 
 import { Container } from './styles';
 
@@ -16,7 +17,13 @@ class BooksScreen extends React.Component {
     render() {
         const { books, totalItems } = this.props;
         console.log({ books, totalItems });
-        return <Container />;
+        return (
+            <Container>
+                {books.map(e => (
+                    <BookItem onClick={() => alert(e.id)} key={e.id} {...e} />
+                ))}
+            </Container>
+        );
     }
 }
 

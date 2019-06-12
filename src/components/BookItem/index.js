@@ -16,9 +16,11 @@ import {
     OldPriceText
 } from './styles';
 
+const parseTitle = ({ title }) => (title.length > 17 ? title.substr(0, 17) : title);
+
 class BookItem extends React.Component {
     render() {
-        const { title, tumbImg, stars, author, price, oldPrice } = this.props;
+        const { title, tumbImg, stars, author, price, oldPrice, onClick } = this.props;
         return (
             <Container onClick={() => onClick('book clicked')}>
                 <TumbImg src={tumbImg} />
@@ -34,7 +36,7 @@ class BookItem extends React.Component {
                             startColor="#616161"
                             emptyStarColor="#F7F7F7"
                             editing={false}
-                            starCount={5}
+                            starCount={stars}
                             value={4}
                         />
                         <PriceWrapper>
@@ -48,15 +50,14 @@ class BookItem extends React.Component {
     }
 }
 
-const parseTitle = ({ title }) => (title.length > 17 ? title.substr(0, 17) : title);
-
 BookItem.propTypes = {
     title: PropTypes.string.isRequired,
-    tumbImg: PropTypes.string,
-    stars: PropTypes.number,
-    author: PropTypes.string,
-    price: PropTypes.string,
-    oldPrice: PropTypes.string
+    tumbImg: PropTypes.string.isRequired,
+    stars: PropTypes.number.isRequired,
+    author: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    oldPrice: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
 };
 
 export default withRouter(BookItem);

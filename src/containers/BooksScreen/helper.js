@@ -20,8 +20,9 @@ const resolvePriceToBRL = book => ({
 });
 
 const extractInfos = book => {
-    const { volumeInfo, saleInfo } = book;
+    const { id, volumeInfo, saleInfo } = book;
     return {
+        id,
         title: volumeInfo.title || '',
         tumbImg: volumeInfo.imageLinks.thumbnail || '',
         stars: volumeInfo.averageRating || 0,
