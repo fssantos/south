@@ -16,7 +16,7 @@ import {
     OldPriceText
 } from './styles';
 
-const parseTitle = ({ title }) => (title.length > 17 ? title.substr(0, 17) : title);
+const parseText = ({ text }) => (text.length > 17 ? text.substr(0, 17) : text);
 
 class BookItem extends React.Component {
     render() {
@@ -26,8 +26,8 @@ class BookItem extends React.Component {
                 <TumbImg src={tumbImg} />
                 <InfosWrapper>
                     <TitleAndAuthorWrapper>
-                        <TitleText>{parseTitle({ title })}</TitleText>
-                        <AuthorText>{author}</AuthorText>
+                        <TitleText>{parseText({ text: title })}</TitleText>
+                        <AuthorText>{parseText({ text: author })}</AuthorText>
                     </TitleAndAuthorWrapper>
 
                     <StarAndPriceWrapper>

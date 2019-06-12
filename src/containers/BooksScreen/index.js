@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import { fetchBooks } from '../../ducks';
-import { getBooks, getFilter } from '../../selectors';
+import { changeBooksFilter, fetchMoreBooks } from '../../ducks';
+import { getBooks } from '../../selectors';
 import { sanitizeBook } from './helper';
 import BookItem from '../../components/BookItem';
 
@@ -14,8 +14,7 @@ class BooksScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            startIndex: 1,
-            filter: ''
+            startIndex: 1
         };
 
         this.fetchData = this.fetchData.bind(this);
@@ -27,15 +26,16 @@ class BooksScreen extends React.Component {
     }
 
     fetchInitialData() {
-        const { startIndex } = this.state;
-        const { onFetchBooks } = this.props;
-        onFetchBooks({ startIndex });
+        const { onChangeBooksFilter } = this.props;
+        onChangeBooksFilter({ filter: 'Programação' });
     }
 
     fetchData() {
-        const { onFetchBooks, filter } = this.props;
+        const { onFetchMoreBooks } = this.props;
 
-        this.setState(
+        onFetchMoreBooks();
+
+        /*         this.setState(
             state => ({
                 startIndex: filter !== state.filter ? 2 : state.startIndex + 1,
                 filter: filter !== state.filter ? filter : state.filter
@@ -43,19 +43,19 @@ class BooksScreen extends React.Component {
             () => {
                 onFetchBooks({ startIndex: this.state.startIndex, filter: this.state.filter });
             }
-        );
+        ); */
     }
 
     render() {
         console.log(this.state);
-        const { books, totalItems, filter } = this.props;
-        console.log({ books, totalItems, filter });
+        const { books, totalItems } = this.props;
+        console.log({ books, totalItems });
         return (
             <InfiniteScroll
                 dataLength={books.length}
                 next={this.fetchData}
                 hasMore
-                loader={<h4>Loading...</h4>}
+                loader={<h4 style={{ alignSelf: 'center' }}>Loading...</h4>}
             >
                 <Container>
                     {books.map(e => (
@@ -70,28 +70,27 @@ class BooksScreen extends React.Component {
 function mapStateToProps(state) {
     return {
         books: getBooks(state).map(e => sanitizeBook(e)),
-        filter: getFilter(state),
         totalItems: getBooks(state).totalItems
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        onFetchBooks: ({ startIndex }) => dispatch(fetchBooks({ startIndex }))
+        onChangeBooksFilter: ({ filter }) => dispatch(changeBooksFilter({ filter })),
+        onFetchMoreBooks: () => dispatch(fetchMoreBooks())
     };
 }
 
 BooksScreen.propTypes = {
     books: PropTypes.array,
     totalItems: PropTypes.number,
-    onFetchBooks: PropTypes.func.isRequired,
-    filter: PropTypes.string
+    onChangeBooksFilter: PropTypes.func.isRequired,
+    onFetchMoreBooks: PropTypes.func.isRequired
 };
 
 BooksScreen.defaultProps = {
     books: { items: [] },
-    totalItems: 0,
-    filter: ''
+    totalItems: 0
 };
 
 export default connect(

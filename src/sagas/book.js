@@ -1,21 +1,44 @@
-import { all, call, put, takeLatest } from 'redux-saga/effects';
-import { fetchBooks, changeBooksFilter, fetchBooksCompleted } from '../ducks';
+import { all, call, put, takeLatest, select } from 'redux-saga/effects';
+import * as selectors from '../selectors';
+import {
+    fetchBooks,
+    changeBooksFilter,
+    fetchMoreBooks,
+    fetchBooksCompleted,
+    fetchMoreBooksCompleted
+} from '../ducks';
 import { getBooksFromApi } from '../api';
 
 function* fetchBooksSaga(action) {
-    const { startIndex = 1, filter } = action.payload;
+    const { filter } = action.payload;
     /*     const { searchTerm } = action.payload; */
     try {
-        const books = yield call(() => getBooksFromApi({ searchTerm: filter, startIndex }));
+        const books = yield call(() => getBooksFromApi({ searchTerm: filter, startIndex: 1 }));
         yield put(fetchBooksCompleted({ books }));
     } catch (error) {
         yield put(fetchBooksCompleted(error));
     }
 }
 
+function* fetchMoreBooksSaga() {
+    /*     const { searchTerm } = action.payload; */
+    try {
+        const filter = yield select(selectors.getFilter);
+        const startIndex = yield select(selectors.getStartIndex);
+        console.log({ filter, startIndex });
+        const books = yield call(() =>
+            getBooksFromApi({ searchTerm: filter, startIndex: startIndex + 10 })
+        );
+        yield put(fetchMoreBooksCompleted({ books, startIndex }));
+    } catch (error) {
+        yield put(fetchMoreBooksCompleted(error));
+    }
+}
+
 export default function* bookSaga() {
     yield all([
         takeLatest(fetchBooks, fetchBooksSaga),
-        takeLatest(changeBooksFilter, fetchBooksSaga)
+        takeLatest(changeBooksFilter, fetchBooksSaga),
+        takeLatest(fetchMoreBooks, fetchMoreBooksSaga)
     ]);
 }

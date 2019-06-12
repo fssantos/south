@@ -23,42 +23,42 @@ const size = 25;
 
 export const sections = [
     {
-        query: 'education',
+        query: 'Educação',
         tag: 'Educação',
         Icon: <EducationIcon size={size} color={defaultTheme.primaryFont} />
     },
     {
-        query: 'business',
+        query: 'Negócios',
         tag: 'Negócios',
         Icon: <BusinessIcon size={size} color={defaultTheme.primaryFont} />
     },
     {
-        query: 'fiction',
+        query: 'Ficção',
         tag: 'Ficção',
         Icon: <FictionIcon size={size} color={defaultTheme.primaryFont} />
     },
     {
-        query: 'history',
+        query: 'História',
         tag: 'História',
         Icon: <HistoryIcon size={size} color={defaultTheme.primaryFont} />
     },
     {
-        query: 'self-help',
+        query: 'Autoajuda',
         tag: 'Autoajuda',
         Icon: <SelfHelpIcon size={size} color={defaultTheme.primaryFont} />
     },
     {
-        query: 'romance',
+        query: 'Romance',
         tag: 'Romance',
         Icon: <RomanceIcon size={size} color={defaultTheme.primaryFont} />
     },
     {
-        query: 'child',
+        query: 'Infantis',
         tag: 'Infantis',
         Icon: <ChildIcon size={size} color={defaultTheme.primaryFont} />
     },
     {
-        query: 'health',
+        query: 'Saúde',
         tag: 'Saúde',
         Icon: <HealthIcon size={size} color={defaultTheme.primaryFont} />
     }

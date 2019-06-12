@@ -22,8 +22,8 @@ export const Container = styled.div`
     ${media.phone`
     flex: 1;
     margin-right: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
  `}
 `;
 

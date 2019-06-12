@@ -8,3 +8,9 @@ export function getFilter(state) {
     console.log(resp);
     return resp;
 }
+
+export function getStartIndex(state) {
+    const resp = state.get('books').startIndex;
+    console.log({ resp });
+    return resp;
+}
