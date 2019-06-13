@@ -23,13 +23,6 @@ addDecorator(storyFn => (
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
-storiesOf('Header', module).add('with large screen', () => (
-    <Header
-        onChange={() => alert('Value is changing')}
-        onClick={() => alert('Search button clicked!')}
-    />
-));
-
 storiesOf('SectionItem', module).add('sci-fi sample', () => (
     <SectionItem
         onClick={tag => alert(tag)}
