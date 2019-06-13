@@ -2,19 +2,35 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Modal from 'react-modal';
 
 import { changeBooksFilter, fetchMoreBooks, favoriteClick, fetchFavorites } from '../../ducks';
 import { getBooks } from '../../selectors';
 import { sanitizeBook } from './helper';
 import BookItem from '../../components/BookItem';
+import BookDetail from '../../components/BookDetail';
 
 import { Container } from './styles';
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        backgroundColor: 'white'
+    }
+};
 
 class BooksScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            startIndex: 1
+            startIndex: 1,
+            modalIsOpen: false,
+            selectedItem: null
         };
 
         this.fetchData = this.fetchData.bind(this);
@@ -33,18 +49,7 @@ class BooksScreen extends React.Component {
 
     fetchData() {
         const { onFetchMoreBooks } = this.props;
-
         onFetchMoreBooks();
-
-        /*         this.setState(
-            state => ({
-                startIndex: filter !== state.filter ? 2 : state.startIndex + 1,
-                filter: filter !== state.filter ? filter : state.filter
-            }),
-            () => {
-                onFetchBooks({ startIndex: this.state.startIndex, filter: this.state.filter });
-            }
-        ); */
     }
 
     handleFavoriteClicked({ item }) {
@@ -55,26 +60,44 @@ class BooksScreen extends React.Component {
 
     render() {
         console.log(this.state);
+        const { selectedItem } = this.state;
         const { books, totalItems } = this.props;
         console.log({ books, totalItems });
         return (
-            <InfiniteScroll
-                dataLength={books.length}
-                next={this.fetchData}
-                hasMore
-                loader={<h4 style={{ alignSelf: 'center' }}>Loading...</h4>}
-            >
-                <Container>
-                    {books.map(e => (
-                        <BookItem
-                            onClick={() => alert(e.id)}
-                            onFavoriteClick={() => this.handleFavoriteClicked({ item: e })}
-                            key={e.id}
-                            {...e}
-                        />
-                    ))}
-                </Container>
-            </InfiniteScroll>
+            <div style={{ backgroundColo: 'white' }}>
+                <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onAfterOpen={this.afterOpenModal}
+                    onRequestClose={() => this.setState({ modalIsOpen: false })}
+                    style={customStyles}
+                    contentLabel="Example Modal"
+                >
+                    <BookDetail
+                        onClick={() => alert('I was clicked')}
+                        key={Math.random()}
+                        {...selectedItem}
+                    />
+                </Modal>
+                <InfiniteScroll
+                    dataLength={books.length}
+                    next={this.fetchData}
+                    hasMore
+                    loader={<h4 style={{ alignSelf: 'center' }}>Loading...</h4>}
+                >
+                    <Container>
+                        {books.map(e => (
+                            <BookItem
+                                onClick={() =>
+                                    this.setState({ selectedItem: e, modalIsOpen: true })
+                                }
+                                onFavoriteClick={() => this.handleFavoriteClicked({ item: e })}
+                                key={e.id}
+                                {...e}
+                            />
+                        ))}
+                    </Container>
+                </InfiniteScroll>
+            </div>
         );
     }
 }
@@ -101,7 +124,7 @@ BooksScreen.propTypes = {
     onChangeBooksFilter: PropTypes.func.isRequired,
     onFetchMoreBooks: PropTypes.func.isRequired,
     onFavoriteClick: PropTypes.func.isRequired,
-    onFetchFavorites: PropTypes.func.isRequired,
+    onFetchFavorites: PropTypes.func.isRequired
 };
 
 BooksScreen.defaultProps = {

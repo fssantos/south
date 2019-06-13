@@ -28,7 +28,9 @@ const extractInfos = book => {
         stars: volumeInfo.averageRating || 0,
         author: volumeInfo.authors ? volumeInfo.authors[0] : '',
         oldPrice: saleInfo.listPrice ? saleInfo.listPrice.amount : '',
-        price: saleInfo.retailPrice ? saleInfo.retailPrice.amount : ''
+        price: saleInfo.retailPrice ? saleInfo.retailPrice.amount : '',
+        description: volumeInfo.description,
+        buyLink: saleInfo.buyLink || ''
     };
 };
 

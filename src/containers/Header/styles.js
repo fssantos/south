@@ -9,7 +9,6 @@ export const Container = styled.div`
     display: flex;
     flex: 1;
     padding: 0px 30px;
-
     align-items: center;
     height: 70px;
     background-color: ${props => props.theme.primaryBackgroundColor};

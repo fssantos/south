@@ -13,21 +13,26 @@ import {
     StarAndPriceWrapper,
     PriceWrapper,
     PriceText,
-    OldPriceText
+    OldPriceText,
+    DetailInfoWrapper,
+    DescriptionText,
+    BuyButton
 } from './styles';
 
-const parseText = ({ text }) => (text.length > 17 ? text.substr(0, 17) : text);
+const parseText = ({ text }) => (text.length > 300 ? `${text.substr(0, 300)}...` : text);
 
-class BookItem extends React.Component {
+class BookDetail extends React.Component {
     render() {
         const {
             title,
             tumbImg,
             stars,
             author,
+            description,
             price,
             oldPrice,
-            onClick
+            onClick,
+            buyLink
             /* onFavoriteClick */
         } = this.props;
         return (
@@ -35,8 +40,8 @@ class BookItem extends React.Component {
                 <TumbImg src={tumbImg} />
                 <InfosWrapper>
                     <TitleAndAuthorWrapper>
-                        <TitleText>{parseText({ text: title })}</TitleText>
-                        <AuthorText>{parseText({ text: author })}</AuthorText>
+                        <TitleText>{title}</TitleText>
+                        <AuthorText>{author}</AuthorText>
                     </TitleAndAuthorWrapper>
 
                     <StarAndPriceWrapper>
@@ -53,21 +58,39 @@ class BookItem extends React.Component {
                             <PriceText>{price}</PriceText>
                         </PriceWrapper>
                     </StarAndPriceWrapper>
+                    <DetailInfoWrapper>
+                        {description && (
+                            <DescriptionText>{`Descrição: ${parseText({
+                                text: description
+                            })}`}</DescriptionText>
+                        )}
+                        {buyLink && (
+                            <BuyButton
+                                onClick={() => {
+                                    window.open(buyLink, '_blank');
+                                }}
+                            >
+                                COMPRAR
+                            </BuyButton>
+                        )}
+                    </DetailInfoWrapper>
                 </InfosWrapper>
             </Container>
         );
     }
 }
 
-BookItem.propTypes = {
+BookDetail.propTypes = {
     title: PropTypes.string.isRequired,
     tumbImg: PropTypes.string.isRequired,
     stars: PropTypes.number.isRequired,
     author: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     oldPrice: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    buyLink: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
     /*     onFavoriteClick: PropTypes.func.isRequired */
 };
 
-export default withRouter(BookItem);
+export default withRouter(BookDetail);

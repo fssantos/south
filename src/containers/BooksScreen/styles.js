@@ -4,7 +4,7 @@ import media from '../../constants/media';
 
 export const Container = styled.div`
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-bottom: 50px;
     flex-wrap: wrap;
     background-color: ${props => props.theme.primaryBackgroundColor}
