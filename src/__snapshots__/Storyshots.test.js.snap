@@ -1,5 +1,1033 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots BookDetail with a long description 1`] = `
+<div
+  style={
+    Object {
+      "width": "50%",
+    }
+  }
+>
+  <div
+    className="sc-kGXeez wiBcw"
+  >
+    <svg
+      aria-hidden="true"
+      className="sc-dxgOiQ RUNIu StyledIconBase-sc-bdy9j4 jbPeIR"
+      fill="currentColor"
+      focusable="false"
+      height={22}
+      onClick={[Function]}
+      role={undefined}
+      viewBox="0 0 24 24"
+      width={22}
+    >
+      <path
+        d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+      />
+    </svg>
+    <div
+      className="sc-ckVGcZ eOlBut"
+      onClick={[Function]}
+    >
+      <img
+        className="sc-jKJlTe FXDvr"
+        src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+      />
+      <div
+        className="sc-eNQAEJ dsPisP"
+      >
+        <div
+          className="sc-hMqMXs kpzPYh"
+        >
+          <p
+            className="sc-kEYyzF kAzyut"
+          >
+            Curso de montagem e manutenção de computadores
+          </p>
+          <p
+            className="sc-kkGfuU gZmDEH"
+          >
+            Marilane Almeida
+          </p>
+        </div>
+        <div
+          className="sc-iAyFgw hkElhK"
+        >
+          <div
+            className="dv-star-rating dv-star-rating-non-editable"
+            style={
+              Object {
+                "display": "inline-block",
+                "position": "relative",
+              }
+            }
+          >
+            <input
+              checked={true}
+              className="dv-star-rating-input"
+              id="rate2_4"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={4}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_4"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_3"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={3}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_3"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_2"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={2}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_2"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_1"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={1}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_1"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+          </div>
+          <div
+            className="sc-hSdWYo elxiTo"
+          >
+            <p
+              className="sc-cvbbAY jixcKc"
+            >
+              R$4.95
+            </p>
+            <p
+              className="sc-eHgmQL dGnJJV"
+            >
+              R$9.90
+            </p>
+          </div>
+        </div>
+        <div
+          className="sc-jWBwVP lhRNKy"
+        >
+          <p
+            className="sc-brqgnP kbvMqL"
+          >
+            Descrição: This is a long description just to see with it will not break lines etc etc etc etc etc etc
+                This is a long text just to see with it will not break lines etc etc etc etc etc etc
+                This is a long text just to see with it will not break lines etc etc etc etc etc etc
+      ...
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BookDetail with buy link  1`] = `
+<div
+  style={
+    Object {
+      "width": "50%",
+    }
+  }
+>
+  <div
+    className="sc-kGXeez wiBcw"
+  >
+    <svg
+      aria-hidden="true"
+      className="sc-kpOJdX blVqBL StyledIconBase-sc-bdy9j4 jbPeIR"
+      fill="currentColor"
+      focusable="false"
+      height={22}
+      onClick={[Function]}
+      role={undefined}
+      viewBox="0 0 24 24"
+      width={22}
+    >
+      <path
+        d="M20.205 4.791a5.938 5.938 0 0 0-4.209-1.754A5.906 5.906 0 0 0 12 4.595a5.904 5.904 0 0 0-3.996-1.558 5.942 5.942 0 0 0-4.213 1.758c-2.353 2.363-2.352 6.059.002 8.412L12 21.414l8.207-8.207c2.354-2.353 2.355-6.049-.002-8.416z"
+      />
+    </svg>
+    <div
+      className="sc-ckVGcZ eOlBut"
+      onClick={[Function]}
+    >
+      <img
+        className="sc-jKJlTe FXDvr"
+        src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+      />
+      <div
+        className="sc-eNQAEJ dsPisP"
+      >
+        <div
+          className="sc-hMqMXs kpzPYh"
+        >
+          <p
+            className="sc-kEYyzF kAzyut"
+          >
+            Curso de montagem e manutenção de computadores
+          </p>
+          <p
+            className="sc-kkGfuU gZmDEH"
+          >
+            Marilane Almeida
+          </p>
+        </div>
+        <div
+          className="sc-iAyFgw hkElhK"
+        >
+          <div
+            className="dv-star-rating dv-star-rating-non-editable"
+            style={
+              Object {
+                "display": "inline-block",
+                "position": "relative",
+              }
+            }
+          >
+            <input
+              checked={true}
+              className="dv-star-rating-input"
+              id="rate2_4"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={4}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_4"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_3"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={3}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_3"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_2"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={2}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_2"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_1"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={1}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_1"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+          </div>
+          <div
+            className="sc-hSdWYo elxiTo"
+          >
+            <p
+              className="sc-cvbbAY jixcKc"
+            >
+              R$4.95
+            </p>
+            <p
+              className="sc-eHgmQL dGnJJV"
+            >
+              R$9.90
+            </p>
+          </div>
+        </div>
+        <div
+          className="sc-jWBwVP lhRNKy"
+        >
+          <p
+            className="sc-brqgnP kbvMqL"
+          >
+            Descrição: Test test test and test Test test test and testTest test test and testTest test test and testTest test test and testTest test test and testTest test test and test
+          </p>
+          <div
+            className="sc-cMljjf dCqCEK"
+            onClick={[Function]}
+          >
+            COMPRAR
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BookDetail with favorite selected 1`] = `
+<div
+  style={
+    Object {
+      "width": "50%",
+    }
+  }
+>
+  <div
+    className="sc-kGXeez wiBcw"
+  >
+    <svg
+      aria-hidden="true"
+      className="sc-kpOJdX blVqBL StyledIconBase-sc-bdy9j4 jbPeIR"
+      fill="currentColor"
+      focusable="false"
+      height={22}
+      onClick={[Function]}
+      role={undefined}
+      viewBox="0 0 24 24"
+      width={22}
+    >
+      <path
+        d="M20.205 4.791a5.938 5.938 0 0 0-4.209-1.754A5.906 5.906 0 0 0 12 4.595a5.904 5.904 0 0 0-3.996-1.558 5.942 5.942 0 0 0-4.213 1.758c-2.353 2.363-2.352 6.059.002 8.412L12 21.414l8.207-8.207c2.354-2.353 2.355-6.049-.002-8.416z"
+      />
+    </svg>
+    <div
+      className="sc-ckVGcZ eOlBut"
+      onClick={[Function]}
+    >
+      <img
+        className="sc-jKJlTe FXDvr"
+        src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+      />
+      <div
+        className="sc-eNQAEJ dsPisP"
+      >
+        <div
+          className="sc-hMqMXs kpzPYh"
+        >
+          <p
+            className="sc-kEYyzF kAzyut"
+          >
+            Curso de montagem e manutenção de computadores
+          </p>
+          <p
+            className="sc-kkGfuU gZmDEH"
+          >
+            Marilane Almeida
+          </p>
+        </div>
+        <div
+          className="sc-iAyFgw hkElhK"
+        >
+          <div
+            className="dv-star-rating dv-star-rating-non-editable"
+            style={
+              Object {
+                "display": "inline-block",
+                "position": "relative",
+              }
+            }
+          >
+            <input
+              checked={true}
+              className="dv-star-rating-input"
+              id="rate2_4"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={4}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_4"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_3"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={3}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_3"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_2"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={2}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_2"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_1"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={1}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_1"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+          </div>
+          <div
+            className="sc-hSdWYo elxiTo"
+          >
+            <p
+              className="sc-cvbbAY jixcKc"
+            >
+              R$4.95
+            </p>
+            <p
+              className="sc-eHgmQL dGnJJV"
+            >
+              R$9.90
+            </p>
+          </div>
+        </div>
+        <div
+          className="sc-jWBwVP lhRNKy"
+        >
+          <p
+            className="sc-brqgnP kbvMqL"
+          >
+            Descrição: Test test test and test Test test test and testTest test test and testTest test test and testTest test test and testTest test test and testTest test test and test
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BookDetail without description 1`] = `
+<div
+  style={
+    Object {
+      "width": "50%",
+    }
+  }
+>
+  <div
+    className="sc-kGXeez wiBcw"
+  >
+    <svg
+      aria-hidden="true"
+      className="sc-dxgOiQ RUNIu StyledIconBase-sc-bdy9j4 jbPeIR"
+      fill="currentColor"
+      focusable="false"
+      height={22}
+      onClick={[Function]}
+      role={undefined}
+      viewBox="0 0 24 24"
+      width={22}
+    >
+      <path
+        d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+      />
+    </svg>
+    <div
+      className="sc-ckVGcZ eOlBut"
+      onClick={[Function]}
+    >
+      <img
+        className="sc-jKJlTe FXDvr"
+        src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+      />
+      <div
+        className="sc-eNQAEJ dsPisP"
+      >
+        <div
+          className="sc-hMqMXs kpzPYh"
+        >
+          <p
+            className="sc-kEYyzF kAzyut"
+          >
+            Curso de montagem e manutenção de computadores
+          </p>
+          <p
+            className="sc-kkGfuU gZmDEH"
+          >
+            Marilane Almeida
+          </p>
+        </div>
+        <div
+          className="sc-iAyFgw hkElhK"
+        >
+          <div
+            className="dv-star-rating dv-star-rating-non-editable"
+            style={
+              Object {
+                "display": "inline-block",
+                "position": "relative",
+              }
+            }
+          >
+            <input
+              checked={true}
+              className="dv-star-rating-input"
+              id="rate2_4"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={4}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_4"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_3"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={3}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_3"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_2"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={2}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_2"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+            <input
+              checked={false}
+              className="dv-star-rating-input"
+              id="rate2_1"
+              name="rate2"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                  "marginLeft": -9999,
+                  "position": "absolute",
+                }
+              }
+              type="radio"
+              value={1}
+            />
+            <label
+              className="dv-star-rating-star dv-star-rating-full-star"
+              htmlFor="rate2_1"
+              onClick={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              style={
+                Object {
+                  "color": "#ffb400",
+                  "cursor": "default",
+                  "float": "right",
+                }
+              }
+            >
+              <i
+                style={
+                  Object {
+                    "fontStyle": "normal",
+                  }
+                }
+              >
+                ★
+              </i>
+            </label>
+          </div>
+          <div
+            className="sc-hSdWYo elxiTo"
+          >
+            <p
+              className="sc-cvbbAY jixcKc"
+            >
+              R$4.95
+            </p>
+            <p
+              className="sc-eHgmQL dGnJJV"
+            >
+              R$9.90
+            </p>
+          </div>
+        </div>
+        <div
+          className="sc-jWBwVP lhRNKy"
+        >
+          <p
+            className="sc-brqgnP kbvMqL"
+          >
+            Descrição: Test test test and test Test test test and testTest test test and testTest test test and testTest test test and testTest test test and testTest test test and test
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots BookItem sample 1`] = `
 <div
   className="sc-gZMcBi bJwtyo"
@@ -211,6 +1239,613 @@ exports[`Storyshots BookItem sample 1`] = `
           className="sc-chPdSV kfQcoH"
         >
           R$9.90
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BookItem with image placeholder 1`] = `
+<div
+  className="sc-gZMcBi bJwtyo"
+  onClick={[Function]}
+>
+  <img
+    className="sc-gqjmRU gGcQZY"
+    src="https://via.placeholder.com/169x230.png?text=IMAGEM+N%C3%83O+DISPON%C3%8DVEL"
+  />
+  <div
+    className="sc-VigVT facbFy"
+  >
+    <div
+      className="sc-jTzLTM dEehHl"
+    >
+      <p
+        className="sc-fjdhpX ldJyfM"
+      >
+        Curso de montagem
+      </p>
+      <p
+        className="sc-jzJRlG bAORBt"
+      >
+        Marilane Almeida
+      </p>
+    </div>
+    <div
+      className="sc-cSHVUG dEvoFo"
+    >
+      <div
+        className="dv-star-rating dv-star-rating-non-editable"
+        style={
+          Object {
+            "display": "inline-block",
+            "position": "relative",
+          }
+        }
+      >
+        <input
+          checked={true}
+          className="dv-star-rating-input"
+          id="rate2_4"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={4}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_4"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_3"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={3}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_3"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_2"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={2}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_2"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_1"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={1}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_1"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+      </div>
+      <div
+        className="sc-kAzzGY bccKyZ"
+      >
+        <p
+          className="sc-kgoBCf dGEGbx"
+        >
+          R$4.95
+        </p>
+        <p
+          className="sc-chPdSV kfQcoH"
+        >
+          R$9.90
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BookItem with long author name 1`] = `
+<div
+  className="sc-gZMcBi bJwtyo"
+  onClick={[Function]}
+>
+  <img
+    className="sc-gqjmRU gGcQZY"
+    src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+  />
+  <div
+    className="sc-VigVT facbFy"
+  >
+    <div
+      className="sc-jTzLTM dEehHl"
+    >
+      <p
+        className="sc-fjdhpX ldJyfM"
+      >
+        This is a long te
+      </p>
+      <p
+        className="sc-jzJRlG bAORBt"
+      >
+        This is a long te
+      </p>
+    </div>
+    <div
+      className="sc-cSHVUG dEvoFo"
+    >
+      <div
+        className="dv-star-rating dv-star-rating-non-editable"
+        style={
+          Object {
+            "display": "inline-block",
+            "position": "relative",
+          }
+        }
+      />
+      <div
+        className="sc-kAzzGY bccKyZ"
+      >
+        <p
+          className="sc-kgoBCf dGEGbx"
+        >
+          R$4.95
+        </p>
+        <p
+          className="sc-chPdSV kfQcoH"
+        >
+          INDISP.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BookItem with long title 1`] = `
+<div
+  className="sc-gZMcBi bJwtyo"
+  onClick={[Function]}
+>
+  <img
+    className="sc-gqjmRU gGcQZY"
+    src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+  />
+  <div
+    className="sc-VigVT facbFy"
+  >
+    <div
+      className="sc-jTzLTM dEehHl"
+    >
+      <p
+        className="sc-fjdhpX ldJyfM"
+      >
+        This is a long te
+      </p>
+      <p
+        className="sc-jzJRlG bAORBt"
+      >
+        Marilane Almeida
+      </p>
+    </div>
+    <div
+      className="sc-cSHVUG dEvoFo"
+    >
+      <div
+        className="dv-star-rating dv-star-rating-non-editable"
+        style={
+          Object {
+            "display": "inline-block",
+            "position": "relative",
+          }
+        }
+      />
+      <div
+        className="sc-kAzzGY bccKyZ"
+      >
+        <p
+          className="sc-kgoBCf dGEGbx"
+        >
+          R$4.95
+        </p>
+        <p
+          className="sc-chPdSV kfQcoH"
+        >
+          INDISP.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BookItem with unavailable price 1`] = `
+<div
+  className="sc-gZMcBi bJwtyo"
+  onClick={[Function]}
+>
+  <img
+    className="sc-gqjmRU gGcQZY"
+    src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+  />
+  <div
+    className="sc-VigVT facbFy"
+  >
+    <div
+      className="sc-jTzLTM dEehHl"
+    >
+      <p
+        className="sc-fjdhpX ldJyfM"
+      >
+        Curso de montagem
+      </p>
+      <p
+        className="sc-jzJRlG bAORBt"
+      >
+        Marilane Almeida
+      </p>
+    </div>
+    <div
+      className="sc-cSHVUG dEvoFo"
+    >
+      <div
+        className="dv-star-rating dv-star-rating-non-editable"
+        style={
+          Object {
+            "display": "inline-block",
+            "position": "relative",
+          }
+        }
+      >
+        <input
+          checked={true}
+          className="dv-star-rating-input"
+          id="rate2_4"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={4}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_4"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_3"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={3}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_3"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_2"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={2}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_2"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+        <input
+          checked={false}
+          className="dv-star-rating-input"
+          id="rate2_1"
+          name="rate2"
+          onChange={[Function]}
+          style={
+            Object {
+              "display": "none",
+              "marginLeft": -9999,
+              "position": "absolute",
+            }
+          }
+          type="radio"
+          value={1}
+        />
+        <label
+          className="dv-star-rating-star dv-star-rating-full-star"
+          htmlFor="rate2_1"
+          onClick={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "color": "#ffb400",
+              "cursor": "default",
+              "float": "right",
+            }
+          }
+        >
+          <i
+            style={
+              Object {
+                "fontStyle": "normal",
+              }
+            }
+          >
+            ★
+          </i>
+        </label>
+      </div>
+      <div
+        className="sc-kAzzGY bccKyZ"
+      >
+        <p
+          className="sc-kgoBCf dGEGbx"
+        >
+          R$4.95
+        </p>
+        <p
+          className="sc-chPdSV kfQcoH"
+        >
+          INDISP.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BookItem without stars 1`] = `
+<div
+  className="sc-gZMcBi bJwtyo"
+  onClick={[Function]}
+>
+  <img
+    className="sc-gqjmRU gGcQZY"
+    src="https://books.google.com/books/content/images/frontcover/vJVFx11Y4toC?fife=w160-h230"
+  />
+  <div
+    className="sc-VigVT facbFy"
+  >
+    <div
+      className="sc-jTzLTM dEehHl"
+    >
+      <p
+        className="sc-fjdhpX ldJyfM"
+      >
+        Curso de montagem
+      </p>
+      <p
+        className="sc-jzJRlG bAORBt"
+      >
+        Marilane Almeida
+      </p>
+    </div>
+    <div
+      className="sc-cSHVUG dEvoFo"
+    >
+      <div
+        className="dv-star-rating dv-star-rating-non-editable"
+        style={
+          Object {
+            "display": "inline-block",
+            "position": "relative",
+          }
+        }
+      />
+      <div
+        className="sc-kAzzGY bccKyZ"
+      >
+        <p
+          className="sc-kgoBCf dGEGbx"
+        >
+          R$4.95
+        </p>
+        <p
+          className="sc-chPdSV kfQcoH"
+        >
+          INDISP.
         </p>
       </div>
     </div>

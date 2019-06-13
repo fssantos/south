@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import defaultTheme from './constants/defaultTheme';
 
 import Header from './containers/Header';
@@ -14,10 +14,7 @@ class App extends Component {
                 <div>
                     <Header />
                     <Switch>
-                        <Route path="/home" component={() => <Home />} />
-                        <Route path="/testing2" component={() => <p>Hello</p>} />
-
-                        <Redirect to="/home" />
+                        <Route path="/" component={() => <Home />} />
                     </Switch>
                 </div>
             </ThemeProvider>
