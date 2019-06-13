@@ -3,6 +3,11 @@ export function getBooks(state) {
     return resp.items || [];
 }
 
+export function getFavorites(state) {
+    const resp = state.get('favorites');
+    return resp || [];
+}
+
 export function getFilter(state) {
     const resp = state.get('filter');
     console.log(resp);

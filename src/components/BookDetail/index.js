@@ -5,6 +5,7 @@ import StarRatingComponent from 'react-star-rating-component';
 
 import {
     Container,
+    DetailsContainer,
     TitleText,
     TumbImg,
     TitleAndAuthorWrapper,
@@ -16,7 +17,9 @@ import {
     OldPriceText,
     DetailInfoWrapper,
     DescriptionText,
-    BuyButton
+    BuyButton,
+    FavoriteIconDisabled,
+    FavoriteIconEnabled
 } from './styles';
 
 const parseText = ({ text }) => (text.length > 300 ? `${text.substr(0, 300)}...` : text);
@@ -32,49 +35,57 @@ class BookDetail extends React.Component {
             price,
             oldPrice,
             onClick,
-            buyLink
-            /* onFavoriteClick */
+            buyLink,
+            isFavorite,
+            onFavoriteClick
         } = this.props;
         return (
-            <Container onClick={onClick}>
-                <TumbImg src={tumbImg} />
-                <InfosWrapper>
-                    <TitleAndAuthorWrapper>
-                        <TitleText>{title}</TitleText>
-                        <AuthorText>{author}</AuthorText>
-                    </TitleAndAuthorWrapper>
+            <Container>
+                {isFavorite ? (
+                    <FavoriteIconEnabled size={22} onClick={onFavoriteClick} />
+                ) : (
+                    <FavoriteIconDisabled size={22} onClick={onFavoriteClick} />
+                )}
+                <DetailsContainer onClick={onClick}>
+                    <TumbImg src={tumbImg} />
+                    <InfosWrapper>
+                        <TitleAndAuthorWrapper>
+                            <TitleText>{title}</TitleText>
+                            <AuthorText>{author}</AuthorText>
+                        </TitleAndAuthorWrapper>
 
-                    <StarAndPriceWrapper>
-                        <StarRatingComponent
-                            name="rate2"
-                            startColor="#616161"
-                            emptyStarColor="#F7F7F7"
-                            editing={false}
-                            starCount={stars}
-                            value={4}
-                        />
-                        <PriceWrapper>
-                            <OldPriceText>{oldPrice}</OldPriceText>
-                            <PriceText>{price}</PriceText>
-                        </PriceWrapper>
-                    </StarAndPriceWrapper>
-                    <DetailInfoWrapper>
-                        {description && (
-                            <DescriptionText>{`Descrição: ${parseText({
-                                text: description
-                            })}`}</DescriptionText>
-                        )}
-                        {buyLink && (
-                            <BuyButton
-                                onClick={() => {
-                                    window.open(buyLink, '_blank');
-                                }}
-                            >
-                                COMPRAR
-                            </BuyButton>
-                        )}
-                    </DetailInfoWrapper>
-                </InfosWrapper>
+                        <StarAndPriceWrapper>
+                            <StarRatingComponent
+                                name="rate2"
+                                startColor="#616161"
+                                emptyStarColor="#F7F7F7"
+                                editing={false}
+                                starCount={stars}
+                                value={4}
+                            />
+                            <PriceWrapper>
+                                <OldPriceText>{oldPrice}</OldPriceText>
+                                <PriceText>{price}</PriceText>
+                            </PriceWrapper>
+                        </StarAndPriceWrapper>
+                        <DetailInfoWrapper>
+                            {description && (
+                                <DescriptionText>{`Descrição: ${parseText({
+                                    text: description
+                                })}`}</DescriptionText>
+                            )}
+                            {buyLink && (
+                                <BuyButton
+                                    onClick={() => {
+                                        window.open(buyLink, '_blank');
+                                    }}
+                                >
+                                    COMPRAR
+                                </BuyButton>
+                            )}
+                        </DetailInfoWrapper>
+                    </InfosWrapper>
+                </DetailsContainer>
             </Container>
         );
     }
@@ -89,8 +100,9 @@ BookDetail.propTypes = {
     oldPrice: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     buyLink: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
-    /*     onFavoriteClick: PropTypes.func.isRequired */
+    onClick: PropTypes.func.isRequired,
+    isFavorite: PropTypes.bool.isRequired,
+    onFavoriteClick: PropTypes.func.isRequired
 };
 
 export default withRouter(BookDetail);

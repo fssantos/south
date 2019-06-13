@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Search } from 'styled-icons/boxicons-regular/Search';
+import { Bookmark } from 'styled-icons/boxicons-solid/Bookmark';
 import { UserCircle } from 'styled-icons/boxicons-solid/UserCircle';
 
 import media from '../../constants/media';
@@ -9,6 +9,7 @@ export const Container = styled.div`
     display: flex;
     flex: 1;
     padding: 0px 30px;
+
     align-items: center;
     height: 70px;
     background-color: ${props => props.theme.primaryBackgroundColor};
@@ -54,20 +55,21 @@ export const SearchBarInput = styled.input`
     }
 `;
 
-export const SearchBarIconContainer = styled(Search)`
+export const SearchBarIconContainer = styled.div`
     display: flex;
     width: 50px;
     height: 30px;
     align-items: center;
     justify-content: center;
     margin: 0px;
+    margin-left: 20px;
     color: white;
     background: -webkit-linear-gradient(top, #4387fd, #4683ea);
 `;
 
-export const SearchBarIcon = styled(Search)`
-    width: 12px;
-    height: 12px;
+export const SearchBarIcon = styled(Bookmark)`
+    width: 18px;
+    height: 18px;
     margin: 0px;
     color: white;
 `;

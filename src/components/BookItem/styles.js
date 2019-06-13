@@ -20,10 +20,11 @@ export const Container = styled.div`
     box-shadow: 2px 2px 5px 0px rgba(238, 238, 238, 0.3);
 
     ${media.phone`
-    flex: 1;
+    width: 155px;
     margin-right: 0px;
     padding-left: 12px;
     padding-right: 12px;
+    padding-bottom: 5px;
  `}
 `;
 

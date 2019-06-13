@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { FavoriteBorder } from 'styled-icons/material/FavoriteBorder';
+import { Heart } from 'styled-icons/boxicons-solid/Heart';
+
 import media from '../../constants/media';
 
 const fontColor = 'rgba(97, 97, 97, 0.9)';
@@ -7,6 +10,25 @@ const fontFamily = '"Roboto",Arial,sans-serif';
 const lineHeight = '16px';
 
 export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const FavoriteIconEnabled = styled(Heart)`
+    color: #01579b;
+    margin: 0px;
+    padding: 0px;
+    align-self: flex-end;
+`;
+
+export const FavoriteIconDisabled = styled(FavoriteBorder)`
+    color: #01579b;
+    margin: 0px;
+    padding: 0px;
+    align-self: flex-end;
+`;
+
+export const DetailsContainer = styled.div`
     display: flex;
     margin-top: 30px;
     margin-right: 45px;
@@ -23,6 +45,7 @@ export const Container = styled.div`
     margin-right: 0px;
     padding-left: 12px;
     padding-right: 12px;
+    margin-top: 10px;
  `}
 `;
 

@@ -43,7 +43,7 @@ export class Header extends React.Component {
                         placeholder="Search"
                     />
                     <SearchBarIconContainer
-                        onClick={() => onChangeBooksFilter({ filter: searchText })}
+                        onClick={() => onChangeBooksFilter({ filter: 'favorites' })}
                     >
                         <SearchBarIcon size={8} />
                     </SearchBarIconContainer>

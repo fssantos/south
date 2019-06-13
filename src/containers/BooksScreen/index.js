@@ -5,7 +5,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import Modal from 'react-modal';
 
 import { changeBooksFilter, fetchMoreBooks, favoriteClick, fetchFavorites } from '../../ducks';
-import { getBooks } from '../../selectors';
+import { getBooks, getFavorites, getFilter } from '../../selectors';
 import { sanitizeBook } from './helper';
 import BookItem from '../../components/BookItem';
 import BookDetail from '../../components/BookDetail';
@@ -28,7 +28,6 @@ class BooksScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            startIndex: 1,
             modalIsOpen: false,
             selectedItem: null
         };
@@ -54,15 +53,13 @@ class BooksScreen extends React.Component {
 
     handleFavoriteClicked({ item }) {
         const { onFavoriteClick } = this.props;
-        console.log('I was clicked', { item });
         onFavoriteClick({ item });
     }
 
     render() {
-        console.log(this.state);
         const { selectedItem } = this.state;
-        const { books, totalItems } = this.props;
-        console.log({ books, totalItems });
+        const { books, favorites, onFavoriteClick, filter } = this.props;
+        const items = filter === 'favorites' ? favorites : books;
         return (
             <div style={{ backgroundColo: 'white' }}>
                 <Modal
@@ -73,24 +70,30 @@ class BooksScreen extends React.Component {
                     contentLabel="Example Modal"
                 >
                     <BookDetail
-                        onClick={() => alert('I was clicked')}
+                        onClick={() => {}}
                         key={Math.random()}
+                        isFavorite={
+                            selectedItem ? favorites.find(e => e.id === selectedItem.id) : false
+                        }
+                        onFavoriteClick={() => {
+                            onFavoriteClick({ item: selectedItem });
+                        }}
                         {...selectedItem}
                     />
                 </Modal>
                 <InfiniteScroll
                     dataLength={books.length}
                     next={this.fetchData}
-                    hasMore
+                    hasMore={filter !== 'favorites'}
                     loader={<h4 style={{ alignSelf: 'center' }}>Loading...</h4>}
                 >
                     <Container>
-                        {books.map(e => (
+                        {items.map(e => (
                             <BookItem
                                 onClick={() =>
                                     this.setState({ selectedItem: e, modalIsOpen: true })
                                 }
-                                onFavoriteClick={() => this.handleFavoriteClicked({ item: e })}
+                                onFavoriteClick={() => {}}
                                 key={e.id}
                                 {...e}
                             />
@@ -105,7 +108,9 @@ class BooksScreen extends React.Component {
 function mapStateToProps(state) {
     return {
         books: getBooks(state).map(e => sanitizeBook(e)),
-        totalItems: getBooks(state).totalItems
+        totalItems: getBooks(state).totalItems,
+        favorites: getFavorites(state),
+        filter: getFilter(state)
     };
 }
 
@@ -124,12 +129,15 @@ BooksScreen.propTypes = {
     onChangeBooksFilter: PropTypes.func.isRequired,
     onFetchMoreBooks: PropTypes.func.isRequired,
     onFavoriteClick: PropTypes.func.isRequired,
-    onFetchFavorites: PropTypes.func.isRequired
+    onFetchFavorites: PropTypes.func.isRequired,
+    favorites: PropTypes.array,
+    filter: PropTypes.string.isRequired
 };
 
 BooksScreen.defaultProps = {
     books: { items: [] },
-    totalItems: 0
+    totalItems: 0,
+    favorites: []
 };
 
 export default connect(
