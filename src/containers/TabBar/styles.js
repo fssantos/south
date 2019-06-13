@@ -9,10 +9,12 @@ export const Container = styled.div`
     background-color: ${props => props.theme.primaryBackgroundColor}
     flex-direction: column;
     padding: 20px;
+    max-width: 300px;
     ${media.phone`
     padding: 0px 20px 0px 20px;
     overflow: auto;
     white-space: nowrap;
+    max-width: 800px;
     flex-direction: row;
     flex:1;
     ::-webkit-scrollbar {
