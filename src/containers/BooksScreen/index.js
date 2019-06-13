@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import { changeBooksFilter, fetchMoreBooks, addFavorite } from '../../ducks';
+import { changeBooksFilter, fetchMoreBooks, favoriteClick, fetchFavorites } from '../../ducks';
 import { getBooks } from '../../selectors';
 import { sanitizeBook } from './helper';
 import BookItem from '../../components/BookItem';
@@ -26,8 +26,9 @@ class BooksScreen extends React.Component {
     }
 
     fetchInitialData() {
-        const { onChangeBooksFilter } = this.props;
+        const { onChangeBooksFilter, onFetchFavorites } = this.props;
         onChangeBooksFilter({ filter: 'Programação' });
+        onFetchFavorites();
     }
 
     fetchData() {
@@ -89,7 +90,8 @@ function mapDispatchToProps(dispatch) {
     return {
         onChangeBooksFilter: ({ filter }) => dispatch(changeBooksFilter({ filter })),
         onFetchMoreBooks: () => dispatch(fetchMoreBooks()),
-        onFavoriteClick: ({ item }) => dispatch(addFavorite({ item }))
+        onFavoriteClick: ({ item }) => dispatch(favoriteClick({ item })),
+        onFetchFavorites: () => dispatch(fetchFavorites())
     };
 }
 
@@ -98,7 +100,8 @@ BooksScreen.propTypes = {
     totalItems: PropTypes.number,
     onChangeBooksFilter: PropTypes.func.isRequired,
     onFetchMoreBooks: PropTypes.func.isRequired,
-    onFavoriteClick: PropTypes.func.isRequired
+    onFavoriteClick: PropTypes.func.isRequired,
+    onFetchFavorites: PropTypes.func.isRequired,
 };
 
 BooksScreen.defaultProps = {

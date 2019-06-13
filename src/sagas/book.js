@@ -1,4 +1,5 @@
 import { all, call, put, takeLatest, select } from 'redux-saga/effects';
+import store from 'store';
 import * as selectors from '../selectors';
 import {
     fetchBooks,
@@ -6,10 +7,12 @@ import {
     fetchMoreBooks,
     fetchBooksCompleted,
     fetchMoreBooksCompleted,
-    addFavorite,
-    addFavoriteCompleted
+    favoriteClick,
+    favoriteClickCompleted,
+    fetchFavorites,
+    fetchFavoritesCompleted
 } from '../ducks';
-import { getBooksFromApi } from '../api';
+import { getBooksFromApi, getFavoritesFromStorage } from '../api';
 
 function* fetchBooksSaga(action) {
     const { filter } = action.payload;
@@ -36,10 +39,24 @@ function* fetchMoreBooksSaga() {
     }
 }
 
-function* saveFavorite({ item }) {
-    /*     const { searchTerm } = action.payload; */
-    yield console.log({ item });
-    yield put(addFavoriteCompleted({ item }));
+function* handleFavoriteClick(action) {
+    const { item } = action.payload;
+    if (store.get(`favorite:${item.id}`)) {
+        store.remove(`favorite:${item.id}`);
+        yield put(favoriteClickCompleted({ item, function: `REMOVE` }));
+    } else {
+        store.set(`favorite:${item.id}`, item);
+        yield put(favoriteClickCompleted({ item, function: `ADD` }));
+    }
+}
+
+function* fetchFavoritesSaga() {
+    try {
+        const favorites = yield call(() => getFavoritesFromStorage());
+        yield put(fetchFavoritesCompleted({ favorites }));
+    } catch (error) {
+        yield put(fetchFavoritesCompleted(error));
+    }
 }
 
 export default function* bookSaga() {
@@ -47,6 +64,7 @@ export default function* bookSaga() {
         takeLatest(fetchBooks, fetchBooksSaga),
         takeLatest(changeBooksFilter, fetchBooksSaga),
         takeLatest(fetchMoreBooks, fetchMoreBooksSaga),
-        takeLatest(addFavorite, saveFavorite)
+        takeLatest(favoriteClick, handleFavoriteClick),
+        takeLatest(fetchFavorites, fetchFavoritesSaga)
     ]);
 }
